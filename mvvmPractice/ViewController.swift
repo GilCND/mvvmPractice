@@ -8,10 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var username: BoundTextField!
+    var user = User(name: Observable("Felipe Gil"))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        username.bind(to: user.name)
     }
 
 
